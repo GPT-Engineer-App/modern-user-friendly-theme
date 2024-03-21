@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Container, Grid, GridItem, Heading, Text, Image, Button, Flex, Icon, useColorModeValue } from "@chakra-ui/react";
-import { FaBars, FaSearch, FaUser } from "react-icons/fa";
+import { Box, Container, Grid, GridItem, Heading, Text, Image, Button, useColorModeValue } from "@chakra-ui/react";
+import Navbar from "../components/Navbar";
 
 const Index = () => {
   const bgColor = useColorModeValue("gray.100", "gray.900");
@@ -8,21 +8,7 @@ const Index = () => {
 
   return (
     <Box bg={bgColor} color={textColor} minH="100vh">
-      {/* Header */}
-      <Box as="header" py={4} borderBottomWidth={1}>
-        <Container maxW="container.lg">
-          <Flex align="center" justify="space-between">
-            <Heading as="h1" size="lg">
-              Modern WordPress Theme
-            </Heading>
-            <Flex>
-              <Icon as={FaSearch} mr={4} boxSize={5} />
-              <Icon as={FaUser} mr={4} boxSize={5} />
-              <Icon as={FaBars} boxSize={5} />
-            </Flex>
-          </Flex>
-        </Container>
-      </Box>
+      <Navbar />
 
       {/* Hero Section */}
       <Box py={20}>
